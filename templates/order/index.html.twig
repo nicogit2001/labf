@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container my-5">
+    <h1>Ma Commande</h1>
+
+
+    {{ form_start (deliverForm) }}
+        {{ form_row (deliverForm.addresses) }}
+
+    <a href="{{ path ('app_account_address_form') }}" class="btn btn-primary">Ajouter une adresse</a>
+        {{ form_row (deliverForm.carriers) }}
+    {{ form_end (deliverForm) }}
+
+
+
+{% endblock %}
